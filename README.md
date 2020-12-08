@@ -1,24 +1,32 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Clone the project using below command
 
-Things you may want to cover:
+	`git clone https://github.com/kattanaveenkumar/booking-api.git`
 
 * Ruby version
 
-* System dependencies
+	`ruby 2.6.5p114`
 
-* Configuration
+* Rails version
 
-* Database creation
+	`Rails 6.0.3.4`
 
-* Database initialization
+* Postgresql version
+
+	`11.8`
+
+* Install gems by running below commands
+
+	`bundle install`
+
+* Database Configuration by running below command
+
+	`rake db:create db:migrate db:seed`
+
+* Run the server
+
+	`rails s`
 
 * How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+	`rspec spec/`
