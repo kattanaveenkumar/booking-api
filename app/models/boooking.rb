@@ -1,0 +1,2 @@
+class Boooking < ApplicationRecord
+end
