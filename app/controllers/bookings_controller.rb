@@ -1,10 +1,9 @@
 class BookingsController < ApplicationController
+  has_scope :space_id
+  has_scope :start_date
+
   def index
-    if params[:space_id].present?
-      render json: { bookings: Booking.filter_by_space_id(params[:space_id]).map{ |booking| { id: booking.id, start_date: booking.start_date, end_date: booking.end_date, space: booking.space.name } }} 
-    elsif params[:start_date].present?
-    else
-      render json: {bookings: Booking.includes(:space).all.map{ |booking| {id: booking.id, start_date: booking.start_date, end_date: booking.end_date, space: booking.space.name} }}
-    end
+    @bookings = apply_scopes(Booking).all
+    json_response(@bookings)
   end
 end
