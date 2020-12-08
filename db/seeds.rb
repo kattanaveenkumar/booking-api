@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 5.times do |_n|
   space = Space.create({name: Faker::Name.name})
-  Booking.create(start_date: Date.today+_n, end_date: Date.today+(_n+1), space_id: space.id)
+  Booking.create(description: Faker::Alphanumeric.alphanumeric, start_date: Date.today+_n, end_date: Date.today+(_n+1), space_id: space.id)
 end
