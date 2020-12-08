@@ -1,6 +1,6 @@
-class CreateBoookings < ActiveRecord::Migration[6.0]
+class CreateBookings < ActiveRecord::Migration[6.0]
   def change
-    create_table :boookings, id: :uuid do |t|
+    create_table :bookings, id: :uuid do |t|
       t.text :description
       t.datetime :start_date
       t.datetime :end_date
